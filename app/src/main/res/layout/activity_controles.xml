@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_controles"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="oscarf.androidcontroles.controles">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/texto_tarjeta"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/textoNumeroTarjeta" />
+
+    <Button
+        android:text="@string/boton_enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="83dp"
+        android:id="@+id/buttonEnviar"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <Button
+        android:text="@string/boton_borrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonEnviar"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/buttonBorrar"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="74dp"
+        android:id="@+id/numeroTarjeta"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="@string/texto_expira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numeroTarjeta"
+        android:layout_marginTop="55dp"
+        android:id="@+id/textoExpira" />
+
+    <TextView
+        android:text="@string/texto_tipo_tarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textoPromo"
+        android:id="@+id/textoTipoTarjeta" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/expiraHint"
+        android:ems="10"
+        android:layout_below="@+id/textoExpira"
+        android:layout_alignParentStart="true"
+        android:id="@+id/expira" />
+
+    <TextView
+        android:text="@string/texto_CCV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textoCCV"
+        android:layout_above="@+id/expira"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="@string/texto_promo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:id="@+id/textoPromo"
+        android:layout_below="@+id/expira"
+        android:layout_alignParentEnd="true" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textoPromo"
+        android:layout_alignStart="@+id/buttonBorrar"
+        android:id="@+id/toggleButton" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textoTipoTarjeta"
+        android:id="@+id/dropdownSelector"
+        android:entries="@array/ccTypes"
+        android:layout_toStartOf="@+id/buttonEnviar"
+        android:layout_alignBottom="@+id/toggleButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:maxLength="3"
+        android:layout_below="@+id/textoCCV"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/ccvPassword"
+        android:layout_alignStart="@+id/toggleButton" />
+</RelativeLayout>

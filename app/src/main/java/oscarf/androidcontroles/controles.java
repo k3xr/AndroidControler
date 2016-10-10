@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.ToggleButton;
 
 public class controles extends AppCompatActivity implements View.OnTouchListener, AdapterView.OnItemSelectedListener, View.OnFocusChangeListener {
 
@@ -41,10 +42,14 @@ public class controles extends AppCompatActivity implements View.OnTouchListener
                 EditText expiraText = (EditText) findViewById(R.id.expira);
                 EditText numTarjeta = (EditText) findViewById(R.id.numeroTarjeta);
                 EditText ccv = (EditText) findViewById(R.id.ccvPassword);
+                ToggleButton promoCheck = (ToggleButton)findViewById(R.id.toggleButton);
+                Spinner tipoTarjeta = (Spinner)findViewById(R.id.dropdownSelector);
 
                 expiraText.setText("");
                 numTarjeta.setText("");
                 ccv.setText("");
+                promoCheck.setChecked(false);
+                tipoTarjeta.setSelection(0);
             }
         });
     }
@@ -72,9 +77,6 @@ public class controles extends AppCompatActivity implements View.OnTouchListener
 
     private void activateSendButton(){
         String ccType = getCCType(numeroTarjeta.getText().toString());
-
-        System.out.println(ccType);
-        System.out.println(tipoTarjeta.getSelectedItem());
 
         if(ccType != null && tipoTarjeta.getSelectedItem().equals(ccType)){
             sendButton.setEnabled(true);

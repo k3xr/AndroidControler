@@ -17,4 +17,11 @@
         <item>Discover</item>
     </string-array>
 
+    <string name="goToControles">Ir a Controles</string>
+    <string name="texto_nombre">Nombre</string>
+    <string name="texto_edad">Edad</string>
+    <string name="texto_hombre">Hombre</string>
+    <string name="texto_mujer">Mujer</string>
+    <string name="texto_estudiante">Estudiante</string>
+
 </resources>

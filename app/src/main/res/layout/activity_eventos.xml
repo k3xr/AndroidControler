@@ -11,97 +11,112 @@
     tools:context="oscarf.androidcontroles.Eventos">
 
     <TextView
-        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:id="@+id/textView"
+        android:id="@+id/textViewCompleto"
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/texto_nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/textViewCompleto"
         android:layout_alignParentStart="true"
         android:layout_marginTop="42dp"
-        android:id="@+id/textView2" />
+        android:id="@+id/textViewNombre" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/textViewNombre"
         android:layout_alignParentStart="true"
-        android:id="@+id/editText" />
+        android:id="@+id/editTextNombre" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/texto_edad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/editTextNombre"
         android:layout_alignParentStart="true"
         android:layout_marginTop="32dp"
-        android:id="@+id/textView4" />
+        android:id="@+id/textViewEdad"
+        android:layout_alignEnd="@+id/checkBoxEstudiante" />
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
+        android:layout_below="@+id/textViewEdad"
         android:layout_alignParentStart="true"
-        android:id="@+id/spinner"
-        android:layout_alignEnd="@+id/textView4" />
+        android:id="@+id/spinnerEdad"
+        android:layout_alignEnd="@+id/textViewEdad" />
 
     <CheckBox
-        android:text="CheckBox"
+        android:text="@string/texto_estudiante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/checkBox2" />
-
-    <RadioButton
-        android:text="RadioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/checkBox2"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="31dp"
-        android:id="@+id/radioButton" />
-
-    <RadioButton
-        android:text="RadioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/radioButton"
-        android:layout_alignEnd="@+id/editText"
-        android:id="@+id/radioButton2" />
+        android:id="@+id/checkBoxEstudiante" />
 
     <Button
-        android:text="Button"
+        android:text="@string/boton_borrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_alignBaseline="@+id/button"
-        android:layout_alignBottom="@+id/button"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/buttonBorrar"
+        android:layout_alignBaseline="@+id/buttonEnviar"
+        android:layout_alignBottom="@+id/buttonEnviar"
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/holo_green_dark"/>
 
     <Button
-        android:text="Button"
+        android:text="@string/boton_enviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="27dp"
-        android:id="@+id/button"
+        android:id="@+id/buttonEnviar"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/button2" />
+        android:layout_toStartOf="@+id/buttonBorrar"
+        android:textColor="@android:color/holo_blue_dark"/>
 
     <Button
-        android:text="Button"
+        android:text="@string/goToControles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button"
-        android:layout_alignEnd="@+id/checkBox2"
-        android:id="@+id/button3" />
+        android:layout_alignTop="@+id/buttonEnviar"
+        android:id="@+id/buttonGoToControles"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxEstudiante"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:layout_toStartOf="@+id/buttonEnviar"
+        android:layout_alignEnd="@+id/editTextNombre">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:text="@string/texto_mujer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButtonMujer"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="@string/texto_hombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButtonHombre"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </RadioGroup>
 </RelativeLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android Controles</string>
+    <string name="app_name">Android Controles y Eventos</string>
     <string name="texto_tarjeta">Número de tarjeta</string>
     <string name="texto_expira">Expira:</string>
     <string name="texto_CCV">CCV:</string>
@@ -8,6 +8,7 @@
     <string name="boton_enviar">Enviar</string>
     <string name="boton_borrar">Borrar</string>
     <string name="expiraHint">MM/AA</string>
+    <string name="goToEventos">Ir a Eventos</string>
 
     <string-array name="ccTypes">
         <item>Visa</item>

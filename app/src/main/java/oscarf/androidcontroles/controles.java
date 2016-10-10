@@ -1,5 +1,6 @@
 package oscarf.androidcontroles;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +17,6 @@ public class controles extends AppCompatActivity implements View.OnTouchListener
     Spinner tipoTarjeta;
     EditText numeroTarjeta;
     Button sendButton;
-    Button clearButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,8 @@ public class controles extends AppCompatActivity implements View.OnTouchListener
         setContentView(R.layout.activity_controles);
 
         sendButton = (Button)findViewById(R.id.buttonEnviar);
-        clearButton = (Button)findViewById(R.id.buttonBorrar);
+        Button clearButton = (Button)findViewById(R.id.buttonBorrar);
+        Button goToEventosButton = (Button)findViewById(R.id.buttonGoToEventos);
         numeroTarjeta = (EditText) findViewById(R.id.numeroTarjeta);
         tipoTarjeta = (Spinner)findViewById(R.id.dropdownSelector);
 
@@ -35,6 +36,15 @@ public class controles extends AppCompatActivity implements View.OnTouchListener
 
         numeroTarjeta.setOnTouchListener(this);
         numeroTarjeta.setOnFocusChangeListener(this);
+
+        goToEventosButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open new activity
+                Intent intent = new Intent(controles.this, Eventos.class);
+                startActivity(intent);
+            }
+        });
 
         clearButton.setOnClickListener(new View.OnClickListener() {
             @Override

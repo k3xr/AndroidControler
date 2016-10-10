@@ -116,4 +116,12 @@
         android:layout_alignParentEnd="true"
         android:id="@+id/ccvPassword"
         android:layout_alignStart="@+id/toggleButton" />
+
+    <Button
+        android:text="@string/goToEventos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonEnviar"
+        android:layout_alignParentStart="true"
+        android:id="@+id/buttonGoToEventos" />
 </RelativeLayout>
